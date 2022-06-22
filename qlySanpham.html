@@ -7,7 +7,6 @@
     <title>Admin Clownz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/fontawesome-free-6.1.1-web/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
@@ -28,7 +27,7 @@
                     <p><a href="./index.html">Trang Chủ</a></p>
                 </div>
                 <ul class="menu">
-                   
+                    
                 </ul>
             </div> -->
             <div class="sidebar__item">
@@ -66,25 +65,49 @@
         </div>
         <div class="content">
             <div class="local">
-                <h1>Thông tin tài khoản</h1>
+                <h1>Quản lý Sản Phẩm</h1>
             </div>
-            <div class="info">
-                <div class="info__img">
-                    <img src="./assets/img/siderbar/user/avt.jpg" alt="">
+            <div class="add__product">
+                <div class="form__add">
+                    <div class="form__item">
+                        <label for="">ID</label>
+                        <input type="text" id="id">
+                    </div>
+                    <div class="form__item">
+                        <label for="">NAME</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="form__item">
+                        <label for="">IMAGES</label>
+                        <input type="file" name="" id="img">
+                    </div>
+                    <div class="form__item">
+                        <label for="">PRICE</label>
+                        <input type="text" id="price">
+                    </div>
+                    <div class="form__item">
+                        <label for="">QUANTITY</label>
+                        <input type="number" id="quantity">
+                    </div>
                 </div>
-                <div class="info__list">
-                    <p>Họ và tên: <strong>Ngô Hồng Nhung</strong></p>
-                    <p>Mã Nhân Viên: <strong>19036035364019</strong></p>
-                    <p>Giới Tính: <strong>Nữ</strong></p>
-                    <p>Ngày Sinh: <strong>19/04/2002</strong></p>
-                    <p>Chức Vụ: <strong>Nhân Viên</strong></p>
-                    <p>Địa Chỉ: <strong>Hà Nam</strong></p>
-                    <p>Điện Thoại: <strong>0934399176</strong></p>
-                </div>
+
+                <button onclick="Add()"><i class="fa-solid fa-plus"></i>SUBMIT</button>
             </div>
+
+            <table class="product__list" id="render">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Images</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </div>
     <script src="./js.js"></script>
-    <script src="./qlyNV.js"></script>
 </body>
 </html>
